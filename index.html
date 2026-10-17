@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EclipseWall — Projeto full stack por Adrian Santos</title>
+  <meta name="description" content="EclipseWall: plataforma de wallpapers full stack com React, ASP.NET (.NET 10), PostgreSQL, JWT e Docker." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="EclipseWall — Projeto full stack" />
+  <meta property="og:description" content="React + ASP.NET (.NET 10) + PostgreSQL + JWT + Docker." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/saw.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="header" id="header">
+    <a class="logocontent" href="#inicio" aria-label="Início">
+      <img class="logo" src="assets/saw.svg" alt="" />
+      <p><span class="thin">WALL</span> <b>ECLIPSE</b></p>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#projeto">Projeto</a>
+      <a href="#telas">Telas</a>
+      <a href="#api">API ao vivo</a>
+      <a href="#stack">Stack</a>
+      <a href="#evolucao">Evolução</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <span class="badge reveal"><i class="dot"></i> Projeto full stack · por Adrian Santos</span>
+        <h1 class="title reveal">
+          <span class="line l1">ECLIPSE</span>
+          <span class="line l2">WALL</span>
+          <span class="line l3">WALLPAPERS <b>FULL STACK</b></span>
+        </h1>
+        <p class="lead reveal"><span id="typed"></span><span class="caret">|</span></p>
+        <div class="cta reveal">
+          <a class="btn btn-red" id="siteLink" href="https://eclipse-wall-ybox-five.vercel.app" target="_blank" rel="noopener">Acessar o site</a>
+          <a class="btn btn-glass" href="#api">Ver a API funcionando</a>
+        </div>
+        <div class="scroll-hint reveal"><span></span></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>REACT</span><span>VITE</span><span>ASP.NET</span><span>.NET 10</span><span>ENTITY FRAMEWORK CORE</span><span>POSTGRESQL</span><span>JWT</span><span>BCRYPT</span><span>CLOUDINARY</span><span>DOCKER</span><span>REST</span><span>C#</span>
+        <span>REACT</span><span>VITE</span><span>ASP.NET</span><span>.NET 10</span><span>ENTITY FRAMEWORK CORE</span><span>POSTGRESQL</span><span>JWT</span><span>BCRYPT</span><span>CLOUDINARY</span><span>DOCKER</span><span>REST</span><span>C#</span>
+      </div>
+    </div>
+
+    <section class="section" id="projeto">
+      <div class="container two">
+        <div>
+          <p class="kicker reveal">O PROJETO</p>
+          <h2 class="h2 reveal">Uma plataforma de wallpapers <b>do zero</b></h2>
+          <p class="text reveal">O EclipseWall é um site para explorar e baixar wallpapers, com front-end em React e back-end próprio em ASP.NET, com banco de dados, login e controle de permissões.</p>
+          <div class="glass problem reveal">
+            <h3>Para quem usa</h3>
+            <p>Navega por Popular ou Categoria, pesquisa pelo nome, carrega mais resultados, abre a página do wallpaper e baixa. Cada download é contabilizado.</p>
+          </div>
+          <div class="glass problem reveal">
+            <h3>Conta e permissões</h3>
+            <p>Cadastro e login com JWT, senhas protegidas com BCrypt, ícone de perfil personalizável e upload de wallpapers liberado só para administradores.</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="glass stat reveal"><strong data-count="13">0</strong><span>endpoints na API</span></div>
+          <div class="glass stat reveal"><strong data-count="4">0</strong><span>telas no front</span></div>
+          <div class="glass stat reveal"><strong data-count="4">0</strong><span>entidades no banco</span></div>
+          <div class="glass stat reveal"><strong data-count="2">0</strong><span>camadas: front e API</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="telas">
+      <div class="container">
+        <p class="kicker reveal">INTERFACE</p>
+        <h2 class="h2 reveal">Visual <b>glass</b> escuro</h2>
+        <div class="mock glass reveal">
+          <div class="term-bar"><i></i><i></i><i></i><span>eclipsewall — menu</span></div>
+          <div class="mock-body">
+            <div class="mock-head">
+              <div class="mock-logo"><img src="assets/saw.svg" alt="" /><span>ECLIPSEWALL</span></div>
+              <div class="mock-chips"><b class="hot">POPULAR</b><b>CATEGORIA</b><b>MENU</b></div>
+            </div>
+            <div class="mock-find">Pesquisar</div>
+            <div class="mock-grid">
+              <div class="tile t1"><span>Wallpaper 01</span></div>
+              <div class="tile t2"><span>Wallpaper 02</span></div>
+              <div class="tile t3"><span>Wallpaper 03</span></div>
+              <div class="tile t4"><span>Wallpaper 04</span></div>
+              <div class="tile t5"><span>Wallpaper 05</span></div>
+              <div class="tile t6"><span>Wallpaper 06</span></div>
+            </div>
+            <div class="mock-more">Carregar mais</div>
+          </div>
+        </div>
+        <div class="grid pages">
+          <article class="glass card tilt reveal"><span class="num">/</span><h3>Menu</h3><p>Grade de wallpapers, filtro por categoria, ordem por popularidade, busca e paginação de 12 em 12.</p></article>
+          <article class="glass card tilt reveal"><span class="num">/Login</span><h3>Login</h3><p>Fluxo em duas etapas: valida o e-mail e só então pede a senha, com mostrar/ocultar senha.</p></article>
+          <article class="glass card tilt reveal"><span class="num">/Cadastro</span><h3>Cadastro</h3><p>Criação de conta integrada à API, com validação dos dados antes do envio.</p></article>
+          <article class="glass card tilt reveal"><span class="num">/Download/:slug</span><h3>Download</h3><p>Página do wallpaper com nome, categoria, contador de downloads e download direto da imagem.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="api">
+      <div class="container">
+        <p class="kicker reveal">AO VIVO</p>
+        <h2 class="h2 reveal">A API <b>respondendo</b></h2>
+        <div class="term glass reveal" id="term">
+          <div class="term-bar">
+            <i></i><i></i><i></i>
+            <span>EclipseWallsBE — requisições (simulação)</span>
+            <button class="replay" id="replay" type="button">↻ Reiniciar</button>
+          </div>
+          <pre class="term-body" id="termBody" aria-live="off"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="container">
+        <p class="kicker reveal">POR DENTRO</p>
+        <h2 class="h2 reveal">O que tem <b>debaixo</b></h2>
+        <div class="grid">
+          <article class="glass card tilt reveal">
+            <span class="num">01</span>
+            <h3>Front-end React + Vite</h3>
+            <p>Rotas com <code>react-router-dom</code>, estados com hooks, consumo da API com <code>fetch</code> e layout responsivo com <code>clamp()</code>.</p>
+          </article>
+          <article class="glass card tilt reveal">
+            <span class="num">02</span>
+            <h3>API REST em ASP.NET</h3>
+            <p>.NET 10 com controllers separados para usuários, wallpapers e ícones, usando DTOs para entrada de dados.</p>
+          </article>
+          <article class="glass card tilt reveal">
+            <span class="num">03</span>
+            <h3>Autenticação e permissões</h3>
+            <p>Login com JWT, senhas com BCrypt e rotas protegidas com <code>[Authorize]</code> e roles para a área de administrador.</p>
+          </article>
+          <article class="glass card tilt reveal">
+            <span class="num">04</span>
+            <h3>PostgreSQL + EF Core</h3>
+            <p>Modelos de Usuário, Wallpaper, Favoritos e Ícones, com migrations versionadas.</p>
+          </article>
+          <article class="glass card tilt reveal">
+            <span class="num">05</span>
+            <h3>Docker e Cloudinary</h3>
+            <p>API empacotada com Dockerfile e integração com Cloudinary para imagens.</p>
+          </article>
+          <article class="glass card tilt reveal card-cta">
+            <span class="num">+</span>
+            <h3>Veja o código</h3>
+            <p>Repositório da API no GitHub.</p>
+            <a class="btn btn-red" id="repoApi" href="https://github.com/pedaeadr-hash/EclipseWall-API" target="_blank" rel="noopener">API →</a>
+          </article>
+        </div>
+
+        <div class="code glass reveal">
+          <div class="term-bar"><i></i><i></i><i></i><span>WallREST.cs — trecho simplificado</span></div>
+<pre><code>[<span class="t">HttpGet</span>(<span class="c">"VERIFY"</span>)]
+[<span class="t">Authorize</span>(Roles = <span class="c">"777"</span>)]   <span class="c">// só administrador</span>
+<span class="k">public</span> IActionResult Verificar() =&gt; Ok();
+
+[<span class="t">HttpGet</span>(<span class="c">"downloadslg"</span>)]
+<span class="k">public async</span> Task&lt;IActionResult&gt; Procurar(<span class="k">int</span> slugid = 1)
+{
+    <span class="k">var</span> objeto = <span class="k">await</span> Bank.Wallpapers
+        .FirstOrDefaultAsync(x =&gt; x.Id == slugid);
+
+    <span class="k">if</span> (objeto == <span class="k">null</span>) <span class="k">return</span> BadRequest(<span class="c">"objeto nao encontrado"</span>);
+    <span class="k">return</span> Ok(objeto);
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="evolucao">
+      <div class="container">
+        <p class="kicker reveal">TRAJETÓRIA</p>
+        <h2 class="h2 reveal">Como o projeto <b>foi crescendo</b></h2>
+        <div class="timeline">
+          <div class="tl-line" id="tlLine"></div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="glass tl-card">
+              <small>BACK-END</small>
+              <h3>Modelagem e API</h3>
+              <p>Entidades, migrations no PostgreSQL com EF Core e endpoints REST para listar, buscar, categorizar e contar downloads.</p>
+              <div class="tags"><span>C#</span><span>.NET 10</span><span>EF Core</span><span>PostgreSQL</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="glass tl-card">
+              <small>SEGURANÇA</small>
+              <h3>Contas e permissões</h3>
+              <p>Cadastro, login com JWT, hash de senha com BCrypt e área restrita a administradores.</p>
+              <div class="tags"><span>JWT</span><span>BCrypt</span><span>Roles</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="glass tl-card">
+              <small>FRONT-END</small>
+              <h3>Interface em React</h3>
+              <p>Telas de menu, login, cadastro e download, com efeito glass, animações e consumo da API.</p>
+              <div class="tags"><span>React</span><span>Vite</span><span>CSS</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot pulse"></div>
+            <div class="glass tl-card">
+              <small>EM ANDAMENTO</small>
+              <h3>Próximos passos</h3>
+              <p>O modelo de favoritos já existe na API e o próximo passo é levá-lo à interface, junto com a evolução da arquitetura do back-end.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final" id="proximos">
+      <div class="container center">
+        <p class="kicker reveal">CONECTE-SE</p>
+        <h2 class="h2 big reveal">Aprendendo <b>construindo</b></h2>
+        <p class="text reveal">O EclipseWall é meu projeto full stack, do banco de dados à interface. Feedbacks e dicas são bem-vindos.</p>
+        <div class="cta reveal">
+          <a class="btn btn-red" id="linkedin" href="https://www.linkedin.com/in/adrian-ariel-2b23b3349/" target="_blank" rel="noopener">Conectar no LinkedIn</a>
+          <a class="btn btn-glass" id="siteLink2" href="https://eclipse-wall-ybox-five.vercel.app" target="_blank" rel="noopener">Acessar o EclipseWall</a>
+        </div>
+        <div class="hashtags reveal">
+          <span>#FullStack</span><span>#React</span><span>#DotNet</span><span>#CSharp</span><span>#PostgreSQL</span><span>#Backend</span><span>#DesenvolvimentoWeb</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/saw.svg" alt="" />
+    <p>© 2026 Adrian Ariel Lopes Santos · EclipseWall</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
